@@ -26,7 +26,7 @@ were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic
 - `rahi_wpbook.php`(file): main file from where the execution starts
 - `uninstall.php`(file): is executed when the plugin is uninstalled. Does all the plugin related data cleanup from the database.
 
-There are no third party plugins/libraries used and **working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-wp_book)**
+There are no third party plugins/libraries used and **working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-wp_book)**(book shortcode and widget are visible in the demo. Other features will only be visible from the admin panel)
 
 ## For users:
 ### Activation: 

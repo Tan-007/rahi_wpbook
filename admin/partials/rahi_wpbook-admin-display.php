@@ -69,7 +69,6 @@ function render_custom_metadata( $all_info ) {
 
     global $book_options;
     ?>
-    <!-- labels -->
     <ul class="meta-wrapper">
         <li>
             <label for="book_author_name_field"><?php esc_html_e( 'Author\'s Name', 'rahi_wpbook' ); ?></label>
@@ -78,9 +77,9 @@ function render_custom_metadata( $all_info ) {
 
         <li>
             <label for="book_price_field"><?php esc_html_e( 'Price', 'rahi_wpbook' ); ?></label>
-            <input class="currency-input" type="number" step="0.01" min="0" id="book_price_field" name="book_price_field" value=" <?php echo esc_attr( $all_info[ 'price' ] ); ?> "/>
-            <a title="Change Currency" href=" <?php echo( get_site_url() . '/wp-admin/admin.php?page=book-settings' ); ?>">
-                <div class="currency .bg-secondary"><span> <?php echo $book_options[ 'currency' ] ?> </span> </div>
+            <input class="currency-input" type="number" step="0.01" min="0" id="book_price_field" name="book_price_field" <?php echo 'value="' . esc_attr( $all_info[ 'price' ] ) . '"'; ?> />
+            <a title="Change Currency" href="<?php echo get_site_url() . '/wp-admin/admin.php?page=book-settings' ?>">
+                <div class="currency .bg-secondary"><span><?php echo esc_attr( $book_options[ 'currency' ] )?> </span> </div>
             </a>
         </li>
 
@@ -91,12 +90,12 @@ function render_custom_metadata( $all_info ) {
             
         <li>
             <label for="book_year_field"><?php esc_html_e( 'Year', 'rahi_wpbook' ); ?></label>
-            <input type="number" min="1900" max="2099" step="1" id="book_year_field" name="book_year_field" value=" <?php echo esc_attr( $all_info[ 'year' ] ); ?> "/>
+            <input type="number" min="1900" max="2099" step="1" id="book_year_field" name="book_year_field" <?php echo 'value="' . esc_attr( $all_info[ 'year' ] ) . '"' ?> />
         </li>
             
         <li>
             <label for="book_edition_field"><?php esc_html_e( 'Edition', 'rahi_wpbook' ); ?></label>
-            <input type="number" min="0" id="book_edition_field" name="book_edition_field" value=" <?php echo esc_attr( $all_info[ 'edition' ] ); ?> "/>
+            <input type="number" min="0" id="book_edition_field" name="book_edition_field" <?php echo 'value="' . esc_attr( $all_info[ 'edition' ] ) . '"' ?> />
         </li>
 
         <li>

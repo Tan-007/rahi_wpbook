@@ -397,6 +397,8 @@ class Rahi_wpbook_Admin {
      */
     public function book_add_shortcode( $atts ) {
 
+        global $book_options;
+
         $atts = shortcode_atts(
             array( 
                 'id'          => '',
@@ -408,11 +410,11 @@ class Rahi_wpbook_Admin {
             ), $atts
         );
 
-        // I messed it up here
+        // I probably messed it up here
         $args = array(
             'post_type'      => 'book',
             'post_status'    => 'publish',
-            'posts_per_page' => 999999,
+            'posts_per_page' => $book_options[ 'num_of_books' ],
             'author'         => $atts[ 'author_name' ],
         );
 

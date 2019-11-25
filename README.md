@@ -5,6 +5,7 @@ were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic
 
 - [For Developers](https://github.com/Tan-007/rahi_wpbook#for-developers)
 - [For Users](https://github.com/Tan-007/rahi_wpbook#for-users)
+- [Screenshot(s)](https://github.com/Tan-007/rahi_wpbook#screenshots)
 
 ## For developers: 
 ### Here are the main directories/files:
@@ -24,12 +25,6 @@ were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic
 - `uninstall.php`(file): is executed when the plugin is uninstalled. Does all the plugin related data cleanup from the database.
 
 There are no third party plugins/libraries used and working demo can be found [here](link to demo)
-## Screenshot(s):
-![Book widget](https://i.imgur.com/ZtsLTVw.png)
-![Dashboard widget](https://i.imgur.com/FY7X6a3.png)
-![Manage Books](https://i.imgur.com/dF3ghyj.png)
-![Book settings](https://i.imgur.com/QWPP7tQ.png)
-![Book shortcode output](https://i.imgur.com/ZfZ8YdL.png)
 
 ## For users:
 ### Activation: 
@@ -48,3 +43,11 @@ This plugin is not available on WordPress marketplace hence you will have to man
 5. You are also provided with two widgets. One which shows up in your dashboard, shows information about top 5 book categories. The second widget can be added in your sidebar which let's you display recent books from your chosen book categories!
 6. Plugin also provides you a shortcode `[book]` which can be used to display all of your books at anywhere in your site.
 7. The shortcode accepts various attributes like `id`, `category`, `tag`. You can pass an attribute like, `[book id=5]` which will display the book which has id 5
+
+## Screenshot(s):
+![Book widget](https://i.imgur.com/ZtsLTVw.png)
+![Dashboard widget](https://i.imgur.com/FY7X6a3.png)
+![Manage Books](https://i.imgur.com/dF3ghyj.png)
+![Book settings](https://i.imgur.com/QWPP7tQ.png)
+![Book shortcode output](https://i.imgur.com/ZfZ8YdL.png)
+

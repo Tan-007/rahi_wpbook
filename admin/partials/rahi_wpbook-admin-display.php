@@ -20,18 +20,21 @@
 function book_render_settings_page() {
     global $book_options;
    
-    $currencies = array( 'USD', 'INR', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD' );
-    echo '<h1>Book Settings</h1>
-        <h3 class="title">Manage Options</h3>
+    $currencies = array( 'USD', 'INR', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD' ); ?>
+    
+    <h1><?php esc_html_e( 'Book Settings', 'rahi_wpbook' ); ?></h1>
+        <h3 class="title"><?php esc_html_e( 'Manage Options', 'rahi_wpbook' ); ?></h3>
        
-        <form method="post" action="options.php">';
+        <form method="post" action="options.php">
        
-        settings_fields( 'book-settings-group' );
-    echo '<div class="book-settings-content">
+        <?php settings_fields( 'book-settings-group' ); ?>
+        
+        <div class="book-settings-content">
         <p>
-            <label class="description" for="book_settings[currency]"> Select the currency : </label>
+            <label class="description" for="book_settings[currency]"> <?php esc_html_e( 'Select the currency', 'rahi_wpbook' ); ?>: </label>
            
-            <select id="book_settings[]" name="book_settings[currency]">';
+            <select id="book_settings[]" name="book_settings[currency]">
+            <?php
                 $selected_currency = esc_attr( $book_options[ 'currency' ] );
             foreach ( $currencies as $currency ) {
                 if ( $selected_currency != $currency ) {
@@ -40,18 +43,20 @@ function book_render_settings_page() {
                     echo '<option selected value="' . $currency . '">' . $currency . '</option>';
                 }
             }
-            echo '</select></p>';
+            ?>
+            </select></p>
                
-        echo '<p>
-            <label class="description" for="book_settings[num_of_books]"> Number of books per page : </label>
-            <input type="number" min="0" max="100" step="1" id="book_settings[num_of_books]" name="book_settings[num_of_books]" value="' . esc_attr( $book_options[ 'num_of_books' ] ) .'"/>
+        <p>
+            <label class="description" for="book_settings[num_of_books]"> <?php esc_html_e( 'Number of books per page', 'rahi_wpbook' ); ?>: </label>
+            <input type="number" min="0" max="100" step="1" id="book_settings[num_of_books]" name="book_settings[num_of_books]" value="<?php esc_attr_e( $book_options[ 'num_of_books' ] ); ?>"/>
         </p>
         <p class="submit">
             <input type="submit" class="button-primary" value="Save Options" />
         </p>
        
         </div>
-    </form>';
+    </form>
+    <?php
 }
 
 /**
@@ -67,12 +72,12 @@ function render_custom_metadata( $all_info ) {
     <!-- labels -->
     <ul class="meta-wrapper">
         <li>
-            <label for="book_author_name_field">Author's Name</label>
+            <label for="book_author_name_field"><?php esc_html_e( 'Author\'s Name', 'rahi_wpbook' ); ?></label>
             <input type="text" id="book_author_name_field" name="book_author_name_field" value="<?php echo esc_attr( $all_info[ 'author_name' ] ); ?>"/>
         </li>
 
         <li>
-            <label for="book_price_field">Price</label>
+            <label for="book_price_field"><?php esc_html_e( 'Price', 'rahi_wpbook' ); ?></label>
             <input class="currency-input" type="number" step="0.01" min="0" id="book_price_field" name="book_price_field" value=" <?php echo esc_attr( $all_info[ 'price' ] ); ?> "/>
             <a title="Change Currency" href=" <?php echo( get_site_url() . '/wp-admin/admin.php?page=book-settings' ); ?>">
                 <div class="currency .bg-secondary"><span> <?php echo $book_options[ 'currency' ] ?> </span> </div>
@@ -80,17 +85,17 @@ function render_custom_metadata( $all_info ) {
         </li>
 
         <li>
-            <label for="book_publisher_field">Publisher</label>
+            <label for="book_publisher_field"><?php esc_html_e( 'Publisher', 'rahi_wpbook' ); ?></label>
             <input type="text" id="book_publisher_field" name="book_publisher_field" value=" <?php echo esc_attr( $all_info[ 'publisher' ] ); ?>"/>
         </li>
             
         <li>
-            <label for="book_year_field">Year</label>
+            <label for="book_year_field"><?php esc_html_e( 'Year', 'rahi_wpbook' ); ?></label>
             <input type="number" min="1900" max="2099" step="1" id="book_year_field" name="book_year_field" value=" <?php echo esc_attr( $all_info[ 'year' ] ); ?> "/>
         </li>
             
         <li>
-            <label for="book_edition_field">Edition</label>
+            <label for="book_edition_field"><?php esc_html_e( 'Edition', 'rahi_wpbook' ); ?></label>
             <input type="number" min="0" id="book_edition_field" name="book_edition_field" value=" <?php echo esc_attr( $all_info[ 'edition' ] ); ?> "/>
         </li>
 
@@ -187,8 +192,8 @@ function book_render_dash_widget() {
     
     if ( ! empty( $categories ) ) : ?>
         <p class="book-dash-head">
-            <span><b>Category Name</b></span>
-            <span><b>Count</b></span>
+            <span><b><?php esc_html_e( 'Category Name', 'rahi_wpbook' ); ?></b></span>
+            <span><b><?php esc_html_e( 'Count', 'rahi_wpbook' ); ?></b></span>
         </p>
         
         <ul class="book-dash-list">
@@ -206,7 +211,7 @@ function book_render_dash_widget() {
 
         </ul>
     <?php else : ?>
-        <p><i>Add new book categories to see your top 5 book categories here!</i></p>
+        <p><i><?php esc_html_e( 'Add new book categories to see your top 5 book categories here!', 'rahi_wpbook' ); ?></i></p>
     <?php
     endif;
 }

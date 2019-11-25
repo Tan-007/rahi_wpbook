@@ -19,7 +19,7 @@ class Rahi_WPBook_Widget extends WP_Widget {
 
         $widget_ops = array(
             'classname' => 'rahi_wpbook_widget', // html class name
-            'description' => 'Custom Book Widget for showing books based on their category',
+            'description' => __( 'Custom Book Widget for showing books based on their category', 'rahi_wpbook' ),
         );
 
         parent::__construct( 'rahi_wpbook_book', 'Books', $widget_ops );
@@ -35,7 +35,7 @@ class Rahi_WPBook_Widget extends WP_Widget {
         }
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title' ); ?>:</label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
 
@@ -46,7 +46,7 @@ class Rahi_WPBook_Widget extends WP_Widget {
         ) );
         ?>
         
-        <p>Choose which categories to show: </p>
+        <p><?php esc_html_e('Choose which categories to show', 'rahi_wpbook' ); ?>: </p>
         
         <?php
 	        if ( isset( $instance[ 'selected_categories' ] ) ) {

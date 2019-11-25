@@ -13,6 +13,7 @@ ul.meta-wrapper {
 
 ul.meta-wrapper li {
     display: flex;
+    display: -ms-flexbox;
     flex-direction: row;
     align-items: center;
     margin: 10px 0;

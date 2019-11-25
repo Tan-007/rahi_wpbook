@@ -122,15 +122,15 @@ class Rahi_wpbook_Admin {
     public function add_custom_post_type() {
 
         $labels = array(
-            'name'          => 'Books',
-            'singular_name' => 'Book',
-            'add_new'       => 'Add Book',
-            'all_items'     => 'All Books',
-            'edit_item'     => 'Edit Book',
-            'add_new_item'  => 'Add New Book',
-            'new_item'      => 'Add Book',
-            'view_item'     => 'View Book',
-            'search_item'   => 'Search Book'
+            'name'          => __( 'Books', 'rahi_wpbook' ),
+            'singular_name' => __( 'Book', 'rahi_wpbook' ),
+            'add_new'       => __( 'Add Book', 'rahi_wpbook' ),
+            'all_items'     => __( 'All Books', 'rahi_wpbook' ),
+            'edit_item'     => __( 'Edit Book', 'rahi_wpbook' ),
+            'add_new_item'  => __( 'Add New Book', 'rahi_wpbook' ),
+            'new_item'      => __( 'Add Book', 'rahi_wpbook' ),
+            'view_item'     => __( 'View Book', 'rahi_wpbook' ),
+            'search_item'   => __( 'Search Book', 'rahi_wpbook' ),
         );
 
         $args = array(
@@ -162,17 +162,17 @@ class Rahi_wpbook_Admin {
      */
     public function hi_add_custom_taxonomy() {
         $labels = array(
-            'name'               => 'Book Categories',
-            'singular_name'      => 'Book Category',
-            'search_items'       => 'Search Book Categories',
-            'all_items'          => 'All Book Categories',
+            'name'               => __( 'Book Categories', 'rahi_wpbook' ),
+            'singular_name'      => __( 'Book Category', 'rahi_wpbook' ),
+            'search_items'       => __( 'Search Book Categories', 'rahi_wpbook' ),
+            'all_items'          => __( 'All Book Categories', 'rahi_wpbook' ),
             'parent_item'        => 'Parent Type',
             'parent_item_column' => 'Parent Type:',
-            'edit_item'          => 'Edit Book Category',
-            'update_item'        => 'Update Book Category',
-            'add_new_item'       => 'Add New Book Category',
-            'new_item_name'      => 'New Category Name',
-            'menu_name'          => 'Book Categories',
+            'edit_item'          => __( 'Edit Book Category', 'rahi_wpbook' ),
+            'update_item'        => __( 'Update Book Category', 'rahi_wpbook' ),
+            'add_new_item'       => __( 'Add New Book Category', 'rahi_wpbook' ),
+            'new_item_name'      => __( 'New Category Name', 'rahi_wpbook' ),
+            'menu_name'          => __( 'Book Categories', 'rahi_wpbook' ),
         );
 
         $args = array(
@@ -195,14 +195,14 @@ class Rahi_wpbook_Admin {
      */
     public function add_custom_taxonomy() {
         $labels = array(
-            'name'          => 'Book Tags',
-            'singular_name' => 'Book Tag',
-            'all_items'     => 'All Book Tags',
-            'edit_item'     => 'Edit Book Tag',
-            'update_item'   => 'Update Book Tag',
-            'add_new_item'  => 'Add New Book Tag',
-            'new_item_name' => 'New Tag Name',
-            'menu_name'     => 'Book Tags',
+            'name'          => __( 'Book Tags', 'rahi_wpbook' ),
+            'singular_name' => __( 'Book Tag', 'rahi_wpbook' ),
+            'all_items'     => __( 'All Book Tags', 'rahi_wpbook' ),
+            'edit_item'     => __( 'Edit Book Tag', 'rahi_wpbook' ),
+            'update_item'   => __( 'Update Book Tag', 'rahi_wpbook' ),
+            'add_new_item'  => __( 'Add New Book Tag', 'rahi_wpbook' ),
+            'new_item_name' => __( 'New Tag Name', 'rahi_wpbook' ),
+            'menu_name'     => __( 'Book Tags', 'rahi_wpbook' ),
         );
 
         $args = array(
@@ -237,7 +237,7 @@ class Rahi_wpbook_Admin {
          * These four args are enough, rest are optional
          */
 
-        add_meta_box( 'details', 'Additional Information', array( $this, 'book_meta_info_callback' ), 'book' );
+        add_meta_box( 'details', __( 'Additional Information',  'rahi_wpbook' ), array( $this, 'book_meta_info_callback' ), 'book' );
 
     }
 
@@ -372,7 +372,7 @@ class Rahi_wpbook_Admin {
          */
 
         //'book_render_settings_page' function in : .../admin/partials/rahi_wpbook-admin-display.php   
-        add_menu_page( 'Book Settings', 'Book Settings', 'manage_options', 'book-settings', 'book_render_settings_page',
+        add_menu_page( __( 'Book Settings', 'rahi_wpbook' ), __( 'Book Settings', 'rahi_wpbook' ), 'manage_options', 'book-settings', 'book_render_settings_page',
             'dashicons-chart-pie', '59' );
     }
 
@@ -468,7 +468,7 @@ class Rahi_wpbook_Admin {
      */
     function booK_register_dash_widget() {
         // function in : .../admin/partials/rahi_wpbook-admin-display.php
-        wp_add_dashboard_widget( 'book_dash_cat_widget', 'Top 5 Book Categories', 'book_render_dash_widget' );
+        wp_add_dashboard_widget( 'book_dash_cat_widget', __( 'Top 5 Book Categories', 'rahi_wpbook' ), 'book_render_dash_widget' );
     }
 
 

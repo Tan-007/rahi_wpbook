@@ -1,4 +1,6 @@
 # rahi_wpbook
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Tan-007/rahi_wpbook/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Tan-007/rahi_wpbook/?branch=master)
+
 This WordPress plugin comes bundled with two widgets and whole setup to help you manage books on your WordPress site.
 The plugin was developed during the WordPress training program provided by [rtCamp](https://rtcamp.com/). Requirements for the plugin 
 were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic/plugin-development-assignment/).
@@ -24,7 +26,7 @@ were provided by rtCamp which can be found [here](https://learn.rtcamp.com/topic
 - `rahi_wpbook.php`(file): main file from where the execution starts
 - `uninstall.php`(file): is executed when the plugin is uninstalled. Does all the plugin related data cleanup from the database.
 
-There are no third party plugins/libraries used and working demo can be found [here](link to demo)
+There are no third party plugins/libraries used and **working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-wp_book)**
 
 ## For users:
 ### Activation: 

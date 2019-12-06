@@ -47,6 +47,10 @@ This plugin is not available on WordPress marketplace hence you will have to man
 7. The shortcode accepts various attributes like `id`, `category`, `tag`. You can pass an attribute like, `[book id=5]` which will display the book which has id 5
 
 ## Screenshot(s):
+Book custom meta boxes for additional information about the book
+
+![Book Meta Boxes](https://i.imgur.com/BV7bEPf.png)
+
 Book sidebar widget:
 
 ![Book widget](https://i.imgur.com/ZtsLTVw.png)
